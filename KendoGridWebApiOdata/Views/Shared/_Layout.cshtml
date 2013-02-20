@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    <link href="~/Content/kendo/2012.3.1114/kendo.common.min.css" rel="stylesheet" />
+    <link href="~/Content/kendo/2012.3.1114/kendo.default.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">
+                    <a href="~/">ASP.NET Web API</a>
+                </p>
+            </div>
+            <div class="float-right">
+                <nav>
+                    <ul id="menu">
+                        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+                        <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    @RenderBody()
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/kendo/2012.3.1114/kendo.web.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
